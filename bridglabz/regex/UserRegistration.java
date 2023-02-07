@@ -75,6 +75,15 @@ public class UserRegistration {
                         } else {
                             System.out.println("false");
                         }}
+                    //Uc-8
+                    public void validPasswordRule4() {
+                        Pattern pattern = Pattern.compile("^([A-Z]?[a-z](?=.*[0-9]).{8,})$");
+                        Matcher matcher = pattern.matcher("Arati1992");
+                        if (matcher.matches()) {
+                            System.out.println("true");
+                        } else {
+                            System.out.println("false");
+                        }}
     
 public static void main(String[] args) {
 	System.out.println("Welcome To Regular Expression");
@@ -86,6 +95,7 @@ public static void main(String[] args) {
     regex.validPasswordRule1();
     regex.validPasswordRule2();
     regex.validPasswordRule3();
+    regex.validPasswordRule4();
 
  }
 }
