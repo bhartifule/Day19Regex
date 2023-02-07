@@ -49,10 +49,20 @@ public class UserRegistration {
                // UC-5
                     public void validPasswordRule1(){
                         Pattern pattern = Pattern.compile("^[a-z]{8,}+$");
-                        Matcher matcher = pattern.matcher("bhartifule");
+                        Matcher matcher = pattern.matcher("bhartiff");
                         if (matcher.matches()){
                             System.out.println("valid");
                         }else {
+                            System.out.println("invalid");
+                        }
+                    }
+                   // UC-6
+                    public void validPasswordRule2() {
+                        Pattern pattern = Pattern.compile("^([A-Z]?[a-z]{8,})$");
+                        Matcher matcher = pattern.matcher("Bhartifule");
+                        if (matcher.matches()) {
+                            System.out.println("valid");
+                        } else {
                             System.out.println("invalid");
                         }
                     }
@@ -65,6 +75,7 @@ public static void main(String[] args) {
     regex.validEmail();
     regex.validContactNumber();
     regex.validPasswordRule1();
+    regex.validPasswordRule2();
 
  }
 }
