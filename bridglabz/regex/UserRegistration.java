@@ -23,13 +23,25 @@ public class UserRegistration {
             }else {
                 System.out.println("invalid");
             }
+            }
+        //UC-3
+            public void  validEmail(){
+
+                Pattern pattern = Pattern.compile("^(.+)@(.+)$");
+                Matcher matcher = pattern.matcher("bhartif123@gmail.com");
+                if (matcher.matches()){
+                    System.out.println("true");
+                }else {
+                    System.out.println("false");
+                }
     }
 public static void main(String[] args) {
 	System.out.println("Welcome To Regular Expression");
 	UserRegistration regex = new UserRegistration();
     regex.validFirstName();
     regex.validLastName();
-    
+    regex.validEmail();
+
  }
 }
 
