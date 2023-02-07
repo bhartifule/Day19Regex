@@ -66,6 +66,15 @@ public class UserRegistration {
                             System.out.println("invalid");
                         }
                     }
+                    //UC-7
+                    public void validPasswordRule3() {
+                        Pattern pattern = Pattern.compile("^([A-Z]?[a-z](?=.*[0-9]).{8,})$");
+                        Matcher matcher = pattern.matcher("Bharti1222");
+                        if (matcher.matches()) {
+                            System.out.println("true");
+                        } else {
+                            System.out.println("false");
+                        }}
     
 public static void main(String[] args) {
 	System.out.println("Welcome To Regular Expression");
@@ -76,6 +85,7 @@ public static void main(String[] args) {
     regex.validContactNumber();
     regex.validPasswordRule1();
     regex.validPasswordRule2();
+    regex.validPasswordRule3();
 
  }
 }
