@@ -45,7 +45,18 @@ public class UserRegistration {
                     }else {
                         System.out.println("invalid");
                     }
-    }
+                }
+               // UC-5
+                    public void validPasswordRule1(){
+                        Pattern pattern = Pattern.compile("^[a-z]{8,}+$");
+                        Matcher matcher = pattern.matcher("bhartifule");
+                        if (matcher.matches()){
+                            System.out.println("valid");
+                        }else {
+                            System.out.println("invalid");
+                        }
+                    }
+    
 public static void main(String[] args) {
 	System.out.println("Welcome To Regular Expression");
 	UserRegistration regex = new UserRegistration();
@@ -53,6 +64,7 @@ public static void main(String[] args) {
     regex.validLastName();
     regex.validEmail();
     regex.validContactNumber();
+    regex.validPasswordRule1();
 
  }
 }
