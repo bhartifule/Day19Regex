@@ -1,5 +1,6 @@
 package com.bridglabz.regex;
 
+import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -84,6 +85,24 @@ public class UserRegistration {
                         } else {
                             System.out.println("false");
                         }}
+                    public  void emailAllPattern(){
+                        ArrayList<String> emails = new ArrayList<String>();
+                        emails.add("abc-100@yahoo.com");
+                        emails.add(" abc@yahoo.com,");
+                        emails.add("abc.100@yahoo.com");
+                        emails.add("abc111@abc.com");
+                        emails.add("abc.100@abc.com.au");
+                        emails.add("abc@1.com,");
+                        //invalid emails
+                        emails.add(".abc123#gmail.a");
+                        emails.add("abc@*@gmail.com ");
+                        String regex = "^(.+)@(.+)$";
+                        Pattern pattern = Pattern.compile(regex);
+                        for(String email : emails){
+                            Matcher matcher = pattern.matcher(email);
+                            System.out.println(email +" : "+ matcher.matches()+"\n");
+                        }
+                    }
     
 public static void main(String[] args) {
 	System.out.println("Welcome To Regular Expression");
@@ -96,6 +115,7 @@ public static void main(String[] args) {
     regex.validPasswordRule2();
     regex.validPasswordRule3();
     regex.validPasswordRule4();
+    regex.emailAllPattern();
 
  }
 }
