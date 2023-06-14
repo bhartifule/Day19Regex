@@ -3,7 +3,8 @@ package com.bridglabz.regex;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class UserRegistration {
+public class UserRegistration 
+{
 	//UC-1
 	 public  void validFirstName() {
          Pattern pattern = Pattern.compile("^[A-Z]{1}[a-z]{3,15}$");
