@@ -6,7 +6,8 @@ import java.util.regex.Pattern;
 
 public class UserRegistration {
 	//UC-1
-	 public  void validFirstName() {
+	 public  void validFirstName() 
+	 {
          Pattern pattern = Pattern.compile("^[A-Z]{1}[a-z]{3,15}$");
         Matcher matcher = pattern.matcher("Bharti");
         if (matcher.matches()){
